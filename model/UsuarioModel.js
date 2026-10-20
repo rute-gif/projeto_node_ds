@@ -14,7 +14,23 @@ const criarUsuario = async (
     login,
     senha
 ) => {
-
+const sql = `
+    INSERT INTO usuarios
+    (
+        nome,
+        email,
+        telefone,
+        cep,
+        endereco,
+        numero,
+        complemento,
+        bairro,
+        cidade,
+        estado,
+        login,
+        senha
+    )
+`;
 
 const criarUsuario = async (
     nome,
