@@ -31,7 +31,7 @@ const sql = `
         senha
     )
 `;
-
+VALUES (?, ?, ?)`;
 const criarUsuario = async (
     nome,
     login,
@@ -39,7 +39,7 @@ const criarUsuario = async (
 ) => {
     const sql = `INSERT INTO
                   usuario (nome, login, senha)
-                 VALUES (?, ?, ?)`;
+                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
     const [result] = await db.execute(sql, [nome, login, senha]);  
     return resultado;     
